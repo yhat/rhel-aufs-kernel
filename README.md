@@ -16,8 +16,8 @@ These packages can be built using the following commands. Be aware that building
     pushd aufs3-standalone
     git archive fe1e5d50b83e2987676c27f3e9f721d382e5fefc > ../kernel-ml-aufs/aufs3-standalone.tar
     popd
-    mock -r epel-6-x86_64 --buildsrpm --spec kernel-ml-aufs/kernel-ml-aufs-3.17.spec --sources kernel-ml-aufs --resultdir output
-    mock -r epel-6-x86_64 --rebuild --resultdir output output/kernel-ml-aufs-3.17.1-1.el6.src.rpm
+    /usr/bin/mock -r epel-6-x86_64 --buildsrpm --spec kernel-ml-aufs/kernel-ml-aufs-3.17.spec --sources kernel-ml-aufs --resultdir output
+    /usr/bin/mock -r epel-6-x86_64 --rebuild --resultdir output output/kernel-ml-aufs-3.17.1-1.el6.src.rpm
 
 The resulting RPMs will be placed in a directory named _output_. You can install them with
 
