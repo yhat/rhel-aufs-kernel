@@ -26,8 +26,7 @@ The resulting RPMs will be placed in a directory named _output_. You can install
 In order to use docker, you'll need to install it out of EPEL:
 
     yum install docker-io
-You'll need to configure the cgroup filesystem and reboot into your new kernel. Add the line
 
-    none                    /sys/fs/cgroup          cgroup  defaults        0 0
+Reboot and choose the 3.xx kernel from your GRUB menu (or edit _/boot/grub/grub.conf_ and change your default kernel). Verify that Dcoker is indeed using AUFS.
 
-to _/etc/fstab_. Reboot and choose the 3.xx kernel from your GRUB menu (or edit _/boot/grub/grub.conf_ and change your default kernel).
+    sudo docker info | grep Storage
